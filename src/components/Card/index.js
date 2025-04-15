@@ -3,6 +3,16 @@ import ContentLoader from "react-content-loader";
 import styles from './Card.module.scss'
 import { AppContext } from '../../App';
 
+
+
+import liked from "../../assets/img/heart-liked.svg"
+import unliked from "../../assets/img/heart-unliked.svg"
+import checked from "../../assets/img/btn-checked.svg" 
+import plus from "../../assets/img/plus.svg"
+
+
+
+
 function Card({ id, onFavorite, title, imageUrl, price, onPlus, favorited = false, loading = false }) {
 
     const { isItemAdded } = React.useContext(AppContext)
@@ -37,10 +47,10 @@ function Card({ id, onFavorite, title, imageUrl, price, onPlus, favorited = fals
                     <rect x="1" y="234" rx="5" ry="5" width="80" height="25" />
                     <rect x="124" y="230" rx="10" ry="10" width="32" height="32" />
                 </ContentLoader> : <> { onFavorite && ( <div className={styles.favorite} onClick={onClickFavorite}>
-                    <img width={32} height={32} src={isFavorite ? "/img/heart-liked.svg" : "/img/heart-unliked.svg"} alt="Unliked" />
+                    <img width={32} height={32} src={isFavorite ? liked : unliked} alt="Unliked" />
                 </div>)}
 
-                    <img width='100%' height={135} src={imageUrl} alt="Sneakers" />
+                    <img width='100%' height={135} src={"https://haslestore.com/_next/image?url=https%3A%2F%2Fhaslestore.com%2Fstorage%2Fimport_files%2Fd0%2Fd06af9def95011edbaed2c44fd7ae203_02ce5447fd5d11edbaed2c44fd7ae203.jpg&w=1920&q=75"} alt="Sneakers" />
                     <h5>{title}</h5>
                     <div className="d-flex justify-between align-center">
                         <div className="d-flex flex-column ">
@@ -51,7 +61,7 @@ function Card({ id, onFavorite, title, imageUrl, price, onPlus, favorited = fals
                         {onPlus && (<img
                             className={styles.plus}
                             onClick={onClickPlus} width={16} height={16}
-                            src={isItemAdded(id) ? "/img/btn-checked.svg" : "/img/plus.svg"}
+                            src={isItemAdded(id) ? checked: plus}
                             alt="Plus" />
                         )}
                     </div> </>

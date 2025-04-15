@@ -7,6 +7,14 @@ import { useCart } from "../../hooks/useCart";
 
 import styles from './Drawer.module.scss';
 
+import remove from "../../assets/img/btn-remove.svg" 
+import removetwo from "../../assets/img/remove2.svg" 
+import arrow from "../../assets/img/arrow.svg" 
+import complite  from "../../assets/img/complite-order.svg" 
+import emptybox from "../../assets/img/emptybox.svg" 
+
+
+
 const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms))
 
 function Drawer({ onClose, onRemove, items = [], opened }) {
@@ -48,7 +56,7 @@ function Drawer({ onClose, onRemove, items = [], opened }) {
       <div className={styles.drawer}>
         <h2 className="d-flex justify-between mb-30">
           Кoрзина
-          <img onClick={onClose} className="removeBtn2 cu-p" src="/img/btn-remove.svg" alt="Close" /></h2>
+          <img onClick={onClose} className="removeBtn2 cu-p" src={remove} alt="Close" /></h2>
 
 
         {
@@ -57,15 +65,18 @@ function Drawer({ onClose, onRemove, items = [], opened }) {
               <div className="items flex">
                 {
                   items.map((obj) => (
-                    <div className="cartItem d-flex align-center mb-20 ">
-                      <div style={{ backgroundImage: `url(${obj.imageUrl})` }}
-                        className="cartItemImg"></div>
+                     <div className="cartItem d-flex align-center mb-20 ">
+                     <img 
+  src="https://haslestore.com/_next/image?url=https%3A%2F%2Fhaslestore.com%2Fstorage%2Fimport_files%2Fd0%2Fd06af9def95011edbaed2c44fd7ae203_02ce5447fd5d11edbaed2c44fd7ae203.jpg&w=1920&q=75" 
+  alt={obj.name || "Product image"}
+  className="cartItemImg"
+/>
 
                       <div className="mr-20 flex">
                         <p className="mb-5">{obj.title} </p>
                         <b> {obj.price} руб.</b>
                       </div>
-                      <img onClick={() => onRemove(obj.id)} className="removeBtn" width={18} height={18} src="/img/remove2.svg" alt="Remove" />
+                      <img onClick={() => onRemove(obj.id)} className="removeBtn" width={18} height={18} src={removetwo} alt="Remove" />
                     </div>
 
                   ))
@@ -86,13 +97,13 @@ function Drawer({ onClose, onRemove, items = [], opened }) {
                   </li>
                 </ul>
                 {!isLoading? <button disabled={isLoading} onClick={onClickOrder} className="greenButton">
-                  Оформить заказ<img width={18} height={18} src="/img/arrow.svg" alt="Arrow" />
+                  Оформить заказ<img width={18} height={18} src={arrow }alt="Arrow" />
                 </button> : "Loading..."}
               </div></div>) : (
               <Info
                 title={isOrderComplete ? "Заказ оформлен" : "Корзина пустая"}
                 description={isOrderComplete ? `Ваш заказ #${orderId} скоро будет передан курьерской доставке` : "Добавьте хотя бы одну пару кроссовок, чтобы сделать заказ."}
-                image={isOrderComplete ? "/img/complite-order.svg" : "/img/emptybox.svg"}
+                image={isOrderComplete ? "{complite}" : "{emptybox}"}
               />
             )
 

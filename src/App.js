@@ -31,7 +31,7 @@ function App() {
         setIsLoading(false);
         setCartItems(cartResponse.data);
         setIsFavorites(favoritesResponse.data);
-        setItems(itemsResponse.data);
+      setItems(itemsResponse.data.map((elem) => ({ ...elem, imageUrl: "https://haslestore.com/_next/image?url=https%3A%2F%2Fhaslestore.com%2Fstorage%2Fimport_files%2Fd0%2Fd06af9def95011edbaed2c44fd7ae203_02ce5447fd5d11edbaed2c44fd7ae203.jpg&w=1920&q=75" })));
       } catch (error) {
         alert('Ошибка при запросе данных:(')
       }
