@@ -1,13 +1,26 @@
 {
   "files": {
     "main.css": "/React-sneakers/static/css/main.3aad689c.css",
-    "main.js": "/React-sneakers/static/js/main.7da0c2ba.js",
+    "main.js": "/React-sneakers/static/js/main.f1465fe3.js",
+    "static/media/logo.png": "/React-sneakers/static/media/logo.83b240e2ddfca417da55.png",
+    "static/media/complite-order.svg": "/React-sneakers/static/media/complite-order.b541bfbcbb80a25e465c13b75290ba01.svg",
+    "static/media/emptybox.svg": "/React-sneakers/static/media/emptybox.b30293d5c3ac908340ba9456e42c6d4c.svg",
+    "static/media/remove2.svg": "/React-sneakers/static/media/remove2.112258e5253efa85f0b469c3868af436.svg",
+    "static/media/search.svg": "/React-sneakers/static/media/search.2059037e9b750c865d527af535fed44d.svg",
     "index.html": "/React-sneakers/index.html",
+    "static/media/heart-unliked.svg": "/React-sneakers/static/media/heart-unliked.1fc6bb11fad88f5f2fba0bdc884fc3a8.svg",
+    "static/media/btn-checked.svg": "/React-sneakers/static/media/btn-checked.579167d73618ddd76f975f350f4267f4.svg",
+    "static/media/cart.svg": "/React-sneakers/static/media/cart.964622dfe33cefe8cc1a78ce1e4f8131.svg",
+    "static/media/heart-liked.svg": "/React-sneakers/static/media/heart-liked.7eba517e36f2c6dde2fd0de3fd74c85d.svg",
+    "static/media/arrow.svg": "/React-sneakers/static/media/arrow.d0cf43c5f9b568fb46a7de187b1a4cbc.svg",
+    "static/media/btn-remove.svg": "/React-sneakers/static/media/btn-remove.571b347eadd682bc12716d5f83d3ef73.svg",
+    "static/media/user.svg": "/React-sneakers/static/media/user.496af74c3632fb8f7098448a93a561a3.svg",
+    "static/media/plus.svg": "/React-sneakers/static/media/plus.8d9d81b9533947c750e4d5759de035f1.svg",
     "main.3aad689c.css.map": "/React-sneakers/static/css/main.3aad689c.css.map",
-    "main.7da0c2ba.js.map": "/React-sneakers/static/js/main.7da0c2ba.js.map"
+    "main.f1465fe3.js.map": "/React-sneakers/static/js/main.f1465fe3.js.map"
   },
   "entrypoints": [
     "static/css/main.3aad689c.css",
-    "static/js/main.7da0c2ba.js"
+    "static/js/main.f1465fe3.js"
   ]
 }
